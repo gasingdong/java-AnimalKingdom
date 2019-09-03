@@ -28,5 +28,41 @@ public class AnimalKingdom {
 		animals.sort((v1, v2) -> v2.getYearNamed() - v1.getYearNamed());
 		System.out.println("Descending Year Named:");
 		animals.forEach((v) -> System.out.println(v.getName()));
+
+		animals.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+		System.out.println("Alphabetical:");
+		animals.forEach((v) -> System.out.println(v.getName()));
+
+		animals.sort((v1, v2) -> v1.move().compareToIgnoreCase(v2.move()));
+		System.out.println("By Movement:");
+		animals.forEach((v) -> System.out.println(v.getName()));
+
+		System.out.println("Lung Breathers:");
+		animals.forEach((v) -> {
+			if (v.breath().equalsIgnoreCase("lungs")) {
+				System.out.println(v.getName());
+			}
+		});
+
+		System.out.println("Lung Breathers in 1758:");
+		animals.forEach((v) -> {
+			if (v.breath().equalsIgnoreCase("lungs") && v.getYearNamed() == 1758) {
+				System.out.println(v.getName());
+			}
+		});
+
+		System.out.println("Lung Breathers & Egg Layers:");
+		animals.forEach((v) -> {
+			if (v.breath().equalsIgnoreCase("lungs") && v.reproduce().equalsIgnoreCase("eggs")) {
+				System.out.println(v.getName());
+			}
+		});
+
+		System.out.println("1758 Animals:");
+		animals.forEach((v) -> {
+			if (v.getYearNamed() == 1758) {
+				System.out.println(v.getName());
+			}
+		});
 	}
 }
