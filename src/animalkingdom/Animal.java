@@ -14,6 +14,14 @@ public abstract class Animal {
 		this.id = animalId++;
 	}
 
+	public String getName() {
+		return this.name;
+	}
+
+	public String getYearNamed() {
+		return this.yearNamed;
+	}
+
 	public String consume() {
 		return "eat";
 	}
