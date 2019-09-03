@@ -24,5 +24,9 @@ public class AnimalKingdom {
 		animals.add(new Fish("Salmon", 1758));
 		animals.add(new Fish("Catfish", 1817));
 		animals.add(new Fish("Perch", 1758));
+
+		animals.sort((v1, v2) -> v2.getYearNamed() - v1.getYearNamed());
+		System.out.println("Descending Year Named:");
+		animals.forEach((v) -> System.out.println(v.getName()));
 	}
 }

@@ -18,7 +18,7 @@ public abstract class Animal {
 		return this.name;
 	}
 
-	public String getYearNamed() {
+	public int getYearNamed() {
 		return this.yearNamed;
 	}
 
